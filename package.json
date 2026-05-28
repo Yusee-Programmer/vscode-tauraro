@@ -1,8 +1,8 @@
 {
   "name": "tauraro-language",
-  "displayName": "Tauraro Language",
-  "description": "Complete language support for Tauraro — rich Java-style syntax highlighting, bilingual (English + Hausa) keywords, code snippets, and a custom dark theme.",
-  "version": "2.0.1",
+  "displayName": "Tauraro Language Support",
+  "description": "Complete language support for Tauraro — a systems-grade programming language with Python-style syntax, Rust-level performance, and full bilingual (English + Hausa) keyword support.",
+  "version": "2.0.3",
   "publisher": "YuseeHabibu",
   "icon": "tauraro-img.jpg",
   "license": "MIT",
