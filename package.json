@@ -1,30 +1,98 @@
 {
-  "name": "tauraro",
-  "displayName": "tauraro",
+  "name": "tauraro-language",
+  "displayName": "Tauraro Language Support",
+  "description": "Complete language support for Tauraro — a systems-grade programming language with Python-style syntax, Rust-level performance, and full bilingual (English + Hausa) keyword support.",
+  "version": "2.0.3",
   "publisher": "YuseeHabibu",
-  "description": "Syntax highlighting and language support for the Tauraro programming language.",
-  "version": "0.0.2",
+  "icon": "tauraro-img.jpg",
+  "license": "MIT",
   "engines": {
-    "vscode": "^1.23.0"
+    "vscode": "^1.80.0"
   },
   "categories": [
-    "Programming Languages"
+    "Programming Languages",
+    "Snippets",
+    "Themes"
   ],
+  "keywords": [
+    "tauraro",
+    "tau",
+    "hausa",
+    "multilingual",
+    "systems programming",
+    "tauraro language"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Yusee-Programmer/tauraro"
+  },
   "contributes": {
-    "languages": [{
-      "id": "tauraro",
-      "aliases": ["tauraro", "tauraro"],
-      "extensions": [".tr", ".tau", ".tauraro"],
-      "configuration": "./language-configuration.json",
-      "icon": {
-        "light": "./tauraro-img.jpg",
-        "dark": "./tauraro-img.jpg"
+    "languages": [
+      {
+        "id": "tauraro",
+        "aliases": [
+          "Tauraro",
+          "tau",
+          "tr"
+        ],
+        "extensions": [
+          ".tr",
+          ".tau",
+          ".tauraro"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "./tauraro-img.jpg",
+          "dark": "./tauraro-img.jpg"
+        }
       }
-    }],
-    "grammars": [{
-      "language": "tauraro",
-      "scopeName": "source.tauraro",
-      "path": "./syntaxes/tauraro.tmLanguage.json"
-    }]
+    ],
+    "grammars": [
+      {
+        "language": "tauraro",
+        "scopeName": "source.tauraro",
+        "path": "./syntaxes/tauraro.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "tauraro",
+        "path": "./snippets/tauraro.json"
+      }
+    ],
+    "themes": [
+      {
+        "label": "Tauraro Dark (Java Style)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/tauraro-dark.json"
+      }
+    ],
+    "configurationDefaults": {
+      "[tauraro]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": false,
+        "editor.fontFamily": "'JetBrains Mono', 'Fira Code', 'Cascadia Code', Consolas, monospace",
+        "editor.fontLigatures": true,
+        "editor.fontSize": 14,
+        "editor.lineHeight": 1.65,
+        "editor.letterSpacing": 0.3,
+        "editor.wordWrap": "off",
+        "editor.rulers": [
+          100
+        ],
+        "editor.renderWhitespace": "boundary",
+        "editor.bracketPairColorization.enabled": true,
+        "editor.guides.bracketPairs": "active",
+        "editor.guides.indentation": true,
+        "editor.cursorBlinking": "smooth",
+        "editor.cursorStyle": "line",
+        "editor.renderLineHighlight": "all",
+        "editor.smoothScrolling": true,
+        "editor.minimap.renderCharacters": false,
+        "editor.linkedEditing": true,
+        "editor.showFoldingControls": "always"
+      }
+    }
   }
 }

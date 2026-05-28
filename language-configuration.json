@@ -1,29 +1,58 @@
 {
-    "comments": {
-        "lineComment": "#",
-        "blockComment": [ "\"\"\"", "\"\"\"" ]
+  "comments": {
+    "lineComment": "#",
+    "blockComment": ["\"\"\"", "\"\"\""]
+  },
+  "brackets": [
+    ["{", "}"],
+    ["[", "]"],
+    ["(", ")"]
+  ],
+  "autoClosingPairs": [
+    { "open": "{",   "close": "}",   "notIn": ["string", "comment"] },
+    { "open": "[",   "close": "]",   "notIn": ["string", "comment"] },
+    { "open": "(",   "close": ")",   "notIn": ["string", "comment"] },
+    { "open": "\"\"\"", "close": "\"\"\"", "notIn": ["string", "comment"] },
+    { "open": "'''", "close": "'''", "notIn": ["string", "comment"] },
+    { "open": "\"",  "close": "\"",  "notIn": ["string"] },
+    { "open": "'",   "close": "'",   "notIn": ["string", "comment"] }
+  ],
+  "autoCloseBefore": ":.,;)]}'`>",
+  "surroundingPairs": [
+    ["{", "}"],
+    ["[", "]"],
+    ["(", ")"],
+    ["\"\"\"", "\"\"\""],
+    ["'''", "'''"],
+    ["\"", "\""],
+    ["'", "'"],
+    ["<", ">"]
+  ],
+  "colorizedBracketPairs": [
+    ["(", ")"],
+    ["[", "]"],
+    ["{", "}"]
+  ],
+  "indentationRules": {
+    "increaseIndentPattern": "^((?!.*\\b(?:pass|wuce)\\b.*).*):[ \\t]*(#.*)?$",
+    "decreaseIndentPattern": "^\\s*(else|elif|except|finally|case|sai|koidan|kama|karshe|hali)\\b.*:?\\s*$"
+  },
+  "onEnterRules": [
+    {
+      "beforeText": "^\\s*(?:def|aiki|class|aji|if|idan|elif|koidan|else|sai|for|ga|while|yayinda|try|gwada|except|kama|finally|karshe|with|match|duba|case|hali|enum|interface|extend|struct|tsari|unsafe|extern)\\b.*:\\s*(#.*)?$",
+      "action": { "indent": "indent" }
     },
-    "brackets": [
-        ["{", "}"],
-        ["[", "]"],
-        ["(", ")"]
-    ],
-    "autoClosingPairs": [
-        ["{", "}"],
-        ["[", "]"],
-        ["(", ")"],
-        ["\"", "\""],
-        ["'", "'"],
-        ["'''", "'''"],
-        ["\"\"\"", "\"\"\""]
-    ],
-    "surroundingPairs": [
-        ["{", "}"],
-        ["[", "]"],
-        ["(", ")"],
-        ["\"", "\""],
-        ["'", "'"],
-        ["'''", "'''"],
-        ["\"\"\"", "\"\"\""]
-    ]
+    {
+      "beforeText": "^\\s*#",
+      "action": { "indent": "none" }
+    }
+  ],
+  "folding": {
+    "offSide": true,
+    "markers": {
+      "start": "^\\s*#\\s*region\\b",
+      "end":   "^\\s*#\\s*endregion\\b"
+    }
+  },
+  "wordPattern": "(-?\\d*\\.\\d\\w*)|([^`~!@#%^&*()\\-=+\\[{\\]}\\\\|;:'\",.<>/?\\s][^`~!@#%^&*()\\-=+\\[{\\]}\\\\|;:'\",.<>/?\\s]*)"
 }
