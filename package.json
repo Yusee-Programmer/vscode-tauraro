@@ -2,7 +2,7 @@
   "name": "tauraro-language",
   "displayName": "Tauraro Language",
   "description": "Complete language support for Tauraro — rich Java-style syntax highlighting, bilingual (English + Hausa) keywords, code snippets, and a custom dark theme.",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "publisher": "YuseeHabibu",
   "icon": "tauraro-img.jpg",
   "license": "MIT",
@@ -15,7 +15,12 @@
     "Themes"
   ],
   "keywords": [
-    "tauraro", "tau", "hausa", "multilingual", "systems programming", "tauraro language"
+    "tauraro",
+    "tau",
+    "hausa",
+    "multilingual",
+    "systems programming",
+    "tauraro language"
   ],
   "repository": {
     "type": "git",
@@ -25,8 +30,16 @@
     "languages": [
       {
         "id": "tauraro",
-        "aliases": ["Tauraro", "tau", "tr"],
-        "extensions": [".tr", ".tau", ".tauraro"],
+        "aliases": [
+          "Tauraro",
+          "tau",
+          "tr"
+        ],
+        "extensions": [
+          ".tr",
+          ".tau",
+          ".tauraro"
+        ],
         "configuration": "./language-configuration.json",
         "icon": {
           "light": "./tauraro-img.jpg",
@@ -65,7 +78,9 @@
         "editor.lineHeight": 1.65,
         "editor.letterSpacing": 0.3,
         "editor.wordWrap": "off",
-        "editor.rulers": [100],
+        "editor.rulers": [
+          100
+        ],
         "editor.renderWhitespace": "boundary",
         "editor.bracketPairColorization.enabled": true,
         "editor.guides.bracketPairs": "active",
