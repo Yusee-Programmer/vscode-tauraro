@@ -1,0 +1,289 @@
+{
+  "Function Definition": {
+    "prefix": ["def", "fn"],
+    "body": [
+      "def ${1:name}(${2:args})${3: -> ${4:ReturnType}}:",
+      "\t${0:pass}"
+    ],
+    "description": "Define a function"
+  },
+
+  "Aiki (Hausa Function)": {
+    "prefix": ["aiki", "afn"],
+    "body": [
+      "aiki ${1:suna}(${2:args})${3: -> ${4:Nau'i}}:",
+      "\t${0:wuce}"
+    ],
+    "description": "Bayyana aiki (define a function)"
+  },
+
+  "Public Method": {
+    "prefix": ["pubdef", "pm"],
+    "body": [
+      "pub def ${1:name}(self${2:, ${3:args}})${4: -> ${5:ReturnType}}:",
+      "\t${0:pass}"
+    ],
+    "description": "Define a public method"
+  },
+
+  "Class Definition": {
+    "prefix": ["class", "cls"],
+    "body": [
+      "class ${1:ClassName}${2:(${3:Base})}:",
+      "\tdef __init__(self${4:, ${5:args}}):",
+      "\t\t${0:pass}"
+    ],
+    "description": "Define a class"
+  },
+
+  "Aji (Hausa Class)": {
+    "prefix": ["aji"],
+    "body": [
+      "aji ${1:Suna}${2:(${3:Asali})}:",
+      "\taiki __init__(self${4:, ${5:args}}):",
+      "\t\t${0:wuce}"
+    ],
+    "description": "Bayyana aji (define a class)"
+  },
+
+  "Interface Definition": {
+    "prefix": ["interface", "iface"],
+    "body": [
+      "interface ${1:IName}:",
+      "\tdef ${2:method}(self)${3: -> ${4:ReturnType}}:",
+      "\t\t${0:pass}"
+    ],
+    "description": "Define an interface"
+  },
+
+  "Enum Definition": {
+    "prefix": ["enum"],
+    "body": [
+      "enum ${1:Name}:",
+      "\t${2:Variant1}",
+      "\t${3:Variant2}(${4:i32})",
+      "\t${0}"
+    ],
+    "description": "Define an enum"
+  },
+
+  "Struct Definition": {
+    "prefix": ["struct", "tsari"],
+    "body": [
+      "struct ${1:Name}:",
+      "\t${2:field}: ${3:Type}",
+      "\t${0}"
+    ],
+    "description": "Define a struct"
+  },
+
+  "If Statement": {
+    "prefix": ["if"],
+    "body": [
+      "if ${1:condition}:",
+      "\t${0:pass}"
+    ],
+    "description": "If statement"
+  },
+
+  "If/Else Statement": {
+    "prefix": ["ife", "ifelse"],
+    "body": [
+      "if ${1:condition}:",
+      "\t${2:pass}",
+      "else:",
+      "\t${0:pass}"
+    ],
+    "description": "If/else statement"
+  },
+
+  "If/Elif/Else": {
+    "prefix": ["ifeife"],
+    "body": [
+      "if ${1:condition}:",
+      "\t${2:pass}",
+      "elif ${3:condition2}:",
+      "\t${4:pass}",
+      "else:",
+      "\t${0:pass}"
+    ],
+    "description": "If/elif/else chain"
+  },
+
+  "For Loop": {
+    "prefix": ["for"],
+    "body": [
+      "for ${1:item} in ${2:iterable}:",
+      "\t${0:pass}"
+    ],
+    "description": "For loop"
+  },
+
+  "For Range Loop": {
+    "prefix": ["forr", "fori"],
+    "body": [
+      "for ${1:i} in range(${2:n}):",
+      "\t${0:pass}"
+    ],
+    "description": "For loop over range"
+  },
+
+  "While Loop": {
+    "prefix": ["while"],
+    "body": [
+      "while ${1:condition}:",
+      "\t${0:pass}"
+    ],
+    "description": "While loop"
+  },
+
+  "Try/Except": {
+    "prefix": ["try"],
+    "body": [
+      "try:",
+      "\t${1:pass}",
+      "except ${2:Exception} as ${3:e}:",
+      "\t${0:pass}"
+    ],
+    "description": "Try/except block"
+  },
+
+  "Try/Except/Finally": {
+    "prefix": ["tryf"],
+    "body": [
+      "try:",
+      "\t${1:pass}",
+      "except ${2:Exception} as ${3:e}:",
+      "\t${4:pass}",
+      "finally:",
+      "\t${0:pass}"
+    ],
+    "description": "Try/except/finally block"
+  },
+
+  "Match Statement": {
+    "prefix": ["match"],
+    "body": [
+      "match ${1:value}:",
+      "\tcase ${2:pattern1}:",
+      "\t\t${3:pass}",
+      "\tcase ${4:pattern2}:",
+      "\t\t${5:pass}",
+      "\tcase _:",
+      "\t\t${0:pass}"
+    ],
+    "description": "Match/case statement"
+  },
+
+  "Import": {
+    "prefix": ["import"],
+    "body": ["import ${0:module}"],
+    "description": "Import a module"
+  },
+
+  "From Import": {
+    "prefix": ["from"],
+    "body": ["from ${1:module} import ${0:name}"],
+    "description": "From...import statement"
+  },
+
+  "Print": {
+    "prefix": ["print", "p"],
+    "body": ["print(${0:value})"],
+    "description": "Print a value"
+  },
+
+  "Print F-String": {
+    "prefix": ["printf", "pf"],
+    "body": ["print(f\"${1:message}: {${0:value}}\")"],
+    "description": "Print with f-string interpolation"
+  },
+
+  "Variable Declaration": {
+    "prefix": ["let", "var"],
+    "body": ["let ${1:name} = ${0:value}"],
+    "description": "Declare a variable"
+  },
+
+  "Mutable Variable": {
+    "prefix": ["mut"],
+    "body": ["mut ${1:name} = ${0:value}"],
+    "description": "Declare a mutable variable"
+  },
+
+  "F-String": {
+    "prefix": ["f", "fstr"],
+    "body": ["f\"${1:text}{${0:expr}}\""],
+    "description": "F-string interpolation"
+  },
+
+  "Docstring": {
+    "prefix": ["doc", "\"\"\""],
+    "body": [
+      "\"\"\"",
+      "${1:Description.}",
+      "",
+      "Args:",
+      "    ${2:param}: ${3:description}",
+      "",
+      "Returns:",
+      "    ${0:description}",
+      "\"\"\""
+    ],
+    "description": "Docstring block"
+  },
+
+  "Main Function": {
+    "prefix": ["main"],
+    "body": [
+      "def main():",
+      "\t${0:pass}",
+      "",
+      "main()"
+    ],
+    "description": "Main entry point"
+  },
+
+  "Lambda": {
+    "prefix": ["lambda", "lam"],
+    "body": ["lambda ${1:args}: ${0:expr}"],
+    "description": "Lambda expression"
+  },
+
+  "List Comprehension": {
+    "prefix": ["lc", "listcomp"],
+    "body": ["[${1:expr} for ${2:item} in ${0:iterable}]"],
+    "description": "List comprehension"
+  },
+
+  "Extend Block": {
+    "prefix": ["extend"],
+    "body": [
+      "extend ${1:ClassName}:",
+      "\tpub def ${2:method}(self)${3: -> ${4:ReturnType}}:",
+      "\t\t${0:pass}"
+    ],
+    "description": "Extend a class with new methods"
+  },
+
+  "Async Function": {
+    "prefix": ["adef", "asyncdef"],
+    "body": [
+      "async def ${1:name}(${2:args})${3: -> ${4:ReturnType}}:",
+      "\t${0:pass}"
+    ],
+    "description": "Define an async function"
+  },
+
+  "Result Type Return": {
+    "prefix": ["result"],
+    "body": ["Result[${1:OkType}, ${2:ErrType}]"],
+    "description": "Result type annotation"
+  },
+
+  "Option Type": {
+    "prefix": ["option"],
+    "body": ["Option[${0:Type}]"],
+    "description": "Option type annotation"
+  }
+}
