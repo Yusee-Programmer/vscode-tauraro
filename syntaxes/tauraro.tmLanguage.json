@@ -150,7 +150,7 @@
 
     "keywords-hausa": {
       "name": "keyword.other.hausa.tauraro",
-      "match": "\\b(aiki|aji|tsari|idan|koidan|sai|ga|yayinda|dawo|tsaya|ci_gaba|wuce|duba|hali|gwada|kama|karshe|jefa|marasa_jira|jira|bayar|dan_aiki)\\b"
+      "match": "\\b(aiki|aji|tsari|idan|koidan|sai|ga|yayinda|dawo|tsaya|ci_gaba|wuce|duba|hali|gwada|kama|karshe|jefa|ba_jira|jira|bayar|dan_aiki|shigo|daga|kamar|a_cikin|tare|tabbatar|fito)\\b"
     },
 
     "keywords-exception": {

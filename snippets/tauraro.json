@@ -78,7 +78,7 @@
   },
 
   "If Statement": {
-    "prefix": ["if"],
+    "prefix": ["if", "idan"],
     "body": [
       "if ${1:condition}:",
       "\t${0:pass}"
@@ -87,7 +87,7 @@
   },
 
   "If/Else Statement": {
-    "prefix": ["ife", "ifelse"],
+    "prefix": ["ife", "ifelse", "idan_sai"],
     "body": [
       "if ${1:condition}:",
       "\t${2:pass}",
@@ -98,7 +98,7 @@
   },
 
   "If/Elif/Else": {
-    "prefix": ["ifeife"],
+    "prefix": ["ifeife", "idan_koidan"],
     "body": [
       "if ${1:condition}:",
       "\t${2:pass}",
@@ -111,7 +111,7 @@
   },
 
   "For Loop": {
-    "prefix": ["for"],
+    "prefix": ["for", "ga"],
     "body": [
       "for ${1:item} in ${2:iterable}:",
       "\t${0:pass}"
@@ -120,7 +120,7 @@
   },
 
   "For Range Loop": {
-    "prefix": ["forr", "fori"],
+    "prefix": ["forr", "fori", "gar"],
     "body": [
       "for ${1:i} in range(${2:n}):",
       "\t${0:pass}"
@@ -129,7 +129,7 @@
   },
 
   "While Loop": {
-    "prefix": ["while"],
+    "prefix": ["while", "yayinda"],
     "body": [
       "while ${1:condition}:",
       "\t${0:pass}"
@@ -138,7 +138,7 @@
   },
 
   "Try/Except": {
-    "prefix": ["try"],
+    "prefix": ["try", "gwada"],
     "body": [
       "try:",
       "\t${1:pass}",
@@ -149,7 +149,7 @@
   },
 
   "Try/Except/Finally": {
-    "prefix": ["tryf"],
+    "prefix": ["tryf", "gwadaf"],
     "body": [
       "try:",
       "\t${1:pass}",
@@ -162,7 +162,7 @@
   },
 
   "Match Statement": {
-    "prefix": ["match"],
+    "prefix": ["match", "duba"],
     "body": [
       "match ${1:value}:",
       "\tcase ${2:pattern1}:",
@@ -176,25 +176,25 @@
   },
 
   "Import": {
-    "prefix": ["import"],
+    "prefix": ["import", "shigo"],
     "body": ["import ${0:module}"],
     "description": "Import a module"
   },
 
   "From Import": {
-    "prefix": ["from"],
+    "prefix": ["from", "daga"],
     "body": ["from ${1:module} import ${0:name}"],
     "description": "From...import statement"
   },
 
   "Print": {
-    "prefix": ["print", "p"],
+    "prefix": ["print", "buga", "p"],
     "body": ["print(${0:value})"],
     "description": "Print a value"
   },
 
   "Print F-String": {
-    "prefix": ["printf", "pf"],
+    "prefix": ["printf", "pf", "bugaf"],
     "body": ["print(f\"${1:message}: {${0:value}}\")"],
     "description": "Print with f-string interpolation"
   },
@@ -245,7 +245,7 @@
   },
 
   "Lambda": {
-    "prefix": ["lambda", "lam"],
+    "prefix": ["lambda", "lam", "dan_aiki"],
     "body": ["lambda ${1:args}: ${0:expr}"],
     "description": "Lambda expression"
   },
@@ -267,7 +267,7 @@
   },
 
   "Async Function": {
-    "prefix": ["adef", "asyncdef"],
+    "prefix": ["asyncdef", "ba_jira"],
     "body": [
       "async def ${1:name}(${2:args})${3: -> ${4:ReturnType}}:",
       "\t${0:pass}"

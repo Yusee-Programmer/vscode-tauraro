@@ -30,32 +30,37 @@ A custom dark theme inspired by **IntelliJ IDEA Darcula**, included with the ext
 
 ### Code Snippets
 
-30+ snippets for common Tauraro patterns — trigger with prefix:
+30+ snippets for common Tauraro patterns — trigger with any listed prefix:
 
-| Prefix | Snippet |
-|---|---|
-| `def` / `fn` | Function definition |
-| `aiki` / `afn` | Hausa function definition |
-| `class` / `cls` | Class definition |
-| `aji` | Hausa class definition |
-| `interface` | Interface definition |
-| `enum` | Enum definition |
-| `struct` / `tsari` | Struct definition |
-| `extend` | Extend block |
-| `ife` | If/else |
-| `ifeife` | If/elif/else chain |
-| `for` / `forr` | For loop / for-range loop |
-| `while` | While loop |
-| `try` / `tryf` | Try/except / try/except/finally |
-| `match` | Match/case statement |
-| `main` | Main entry point |
-| `pubdef` / `pm` | Public method |
-| `adef` | Async function |
-| `pf` / `printf` | Print with f-string |
-| `fstr` | F-string expression |
-| `doc` | Docstring block |
-| `result` / `option` | Result / Option type |
-| `lc` | List comprehension |
+| English prefix | Hausa prefix | Snippet |
+|---|---|---|
+| `def` / `fn` | `aiki` / `afn` | Function definition |
+| `class` / `cls` | `aji` | Class definition |
+| `struct` | `tsari` | Struct definition |
+| `interface` | — | Interface definition |
+| `enum` | — | Enum definition |
+| `extend` | — | Extend block |
+| `if` | `idan` | If statement |
+| `ife` / `ifelse` | `idan_sai` | If/else |
+| `ifeife` | `idan_koidan` | If/elif/else chain |
+| `for` | `ga` | For loop |
+| `forr` / `fori` | `gar` | For-range loop |
+| `while` | `yayinda` | While loop |
+| `try` | `gwada` | Try/except |
+| `tryf` | `gwadaf` | Try/except/finally |
+| `match` | `duba` | Match/case statement |
+| `import` | `shigo` | Import module |
+| `from` | `daga` | From…import |
+| `print` / `p` | `buga` | Print value |
+| `printf` / `pf` | `bugaf` | Print with f-string |
+| `lambda` / `lam` | `dan_aiki` | Lambda expression |
+| `asyncdef` | `ba_jira` | Async function |
+| `pubdef` / `pm` | — | Public method |
+| `main` | — | Main entry point |
+| `fstr` | — | F-string expression |
+| `doc` | — | Docstring block |
+| `result` / `option` | — | Result / Option type |
+| `lc` | — | List comprehension |
 
 ### Language Configuration
 
@@ -104,6 +109,17 @@ Every keyword has an English form and a Hausa equivalent — both are fully high
 | `pass` | `wuce` | Pass / no-op |
 | `match` | `duba` | Match statement |
 | `case` | `hali` | Case arm |
+| `in` | `a_cikin` | Membership / iteration |
+| `with` | `tare` | Context manager |
+| `assert` | `tabbatar` | Assertion |
+
+### Imports & Aliases
+
+| English | Hausa | Meaning |
+|---|---|---|
+| `import` | `shigo` | Import module |
+| `from` | `daga` | From module import |
+| `as` | `kamar` | Alias |
 
 ### Exception Handling
 
@@ -118,7 +134,7 @@ Every keyword has an English form and a Hausa equivalent — both are fully high
 
 | English | Hausa | Meaning |
 |---|---|---|
-| `async` | `marasa_jira` | Async function |
+| `async` | `ba_jira` | Async function |
 | `await` | `jira` | Await expression |
 | `yield` | `bayar` | Yield value |
 | `spawn` | — | Spawn task |
@@ -141,7 +157,17 @@ Every keyword has an English form and a Hausa equivalent — both are fully high
 
 ### Modifiers
 
-`pub`, `mut`, `static`, `const`, `abstract`, `virtual`, `override`, `unsafe`, `let`
+| English | Hausa | Meaning |
+|---|---|---|
+| `pub` | `fito` | Public visibility |
+| `mut` | — | Mutable variable |
+| `static` | — | Static member |
+| `const` | — | Constant |
+| `abstract` | — | Abstract declaration |
+| `virtual` | — | Virtual method |
+| `override` | — | Override method |
+| `unsafe` | — | Unsafe block |
+| `let` | — | Variable binding |
 
 ## Built-in Types
 
@@ -190,6 +216,17 @@ aiki gaishe_da_duniya(suna: str):
 To compile and run `.tr` files, install the [Tauraro compiler](https://github.com/Yusee-Programmer/tauraro).
 
 ## Release Notes
+
+### 2.0.5
+- Fixed snippet prefix table: added Hausa prefixes for all keywords (`ga`, `yayinda`, `idan`, `duba`, `gwada`, `buga`, `shigo`, `daga`, `dan_aiki`, `ba_jira`, etc.)
+- Replaced incorrect `adef` async prefix with correct Hausa `ba_jira`
+- Prefix table now shows English and Hausa columns side by side
+
+### 2.0.4
+- Corrected Hausa keyword translations (`async` → `ba_jira`, was `marasa_jira`)
+- Added missing Hausa equivalents: `import`→`shigo`, `from`→`daga`, `as`→`kamar`, `in`→`a_cikin`, `with`→`tare`, `assert`→`tabbatar`, `pub`→`fito`
+- Expanded modifiers section with full table
+- Added Imports & Aliases keyword section
 
 ### 2.0.3
 - Synced marketplace displayName and description to match README
